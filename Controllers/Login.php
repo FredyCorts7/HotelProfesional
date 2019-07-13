@@ -4,5 +4,7 @@
             parent::__construct();
         }
 
-        
+        public function login() {
+            $this->view->render($this, 'login');
+        }
     }

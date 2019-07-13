@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.tittle {
+    font-weight: bolder;
+}
+#logologin {
+    width: 80%;
+    height: 100%;
+}
+.loginbg {
+    background-color: white;
+    border-radius: 10px;
+}
+.darkbg {
+    background-color: #171717;
+}
+.dorbg {
+    background-color: #DAB600;
+    font-weight: bold;
+}

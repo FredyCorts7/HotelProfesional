@@ -1,0 +1,31 @@
+    <title>Hotel Alamo : Principal</title>
+</head>
+<body class="darkbg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 mx-1 my-5 p-4 loginbg">
+                <h1 class="text-center tittle">Inicio de Sesión</h1>
+                <form id="">
+                    <div class="form-group text-center">
+                        <img id="logologin" src="http://localhost/HotelProfesional/Resource/img/login.png" class="imglogin" alt="Login">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtUser">Usuario</label>
+                        <input type="text" id="txtUser" class="form-control" name="user" placeholder="Ingrese nombre" minlength="4" maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword">Contraseña</label>
+                        <input type="password" id="txtPassword" class="form-control" name="pass" placeholder="Contraseña" minlength="4" maxlength="10" required>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="checkbox" id="checkPassword" onclick="mostrarContrasena()">
+                        <label for="checkPassword">Mostrar Contraseña</label><br>
+                        <a href="register.html">Registrarme</a>
+                    </div>
+                    <a id="btnEnviar" onclick="validar()" class="btn btn-block dorbg">Iniciar Sesión</a>
+                </form>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
+        </div>
+    </div>
