@@ -10,7 +10,7 @@ var usuarios = new Usuarios();
 
 var validar = () => {    
     if (validarUsuario(user) && validarContrasena(pass)) {
-        usuarios.iniciarSesion(user, pass)
+        usuarios.iniciarSesion(user.value, pass.value)
     }
 }
 
