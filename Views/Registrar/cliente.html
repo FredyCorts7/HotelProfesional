@@ -1,0 +1,54 @@
+    <title>Hotel Alamo : Registrar Cliente</title>
+</head>
+<body class="darkbg">
+    <div class="container text-center loginbg my-5 p-4">
+        <h1 class="tittle mb-5">Formulario de Registro</h1>
+        <form id="formcliente">
+            <div class="mb-3">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                            <input type="text" id="cliName" class="form-control" placeholder="Ingrese sus nombres ...">
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <input type="text" id="cliLastname" class="form-control" placeholder="Ingrese sus apellidos ...">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                            <select id="cliTipoDoc" class="form-control">
+                                <option value="0">Seleccionar Tipo de Documento</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <input type="number" id="cliDoc" class="form-control" placeholder="Ingrese su documento de identidad ...">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                            <input type="text" id="cliLocation" class="form-control" placeholder="Ingrese su dirección ...">
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <input type="email" id="cliEmail" class="form-control" placeholder="Ingrese su correo electrónico ...">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                            <input type="text" id="cliUser" class="form-control" placeholder="Ingrese su nombre de usuario ...">
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <input type="password" id="cliPass" class="form-control" placeholder="Ingrese su contraseña ...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            Ya tengo cuenta. <a href="http://localhost/HotelProfesional/Login/login">ir a Iniciar Sesión</a>
+            <a onclick="registrarCliente()" class="btn btn-block dorbg hand">Registrarme</a>
+        </form>
+    </div>

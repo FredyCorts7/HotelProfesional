@@ -1,7 +1,7 @@
 <?php
-    class Index_model {
+    class Index_model extends Connection {
         public function __construct() {
-            $this->indexModel();
+            parent::__construct();
         }
 
         public function indexModel() {

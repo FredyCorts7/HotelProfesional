@@ -1,10 +1,10 @@
 <?php
     class Login_model extends Connection {
-        function __construct() {
+        public function __construct() {
             parent::__construct();
         }
 
-        function iniciarSesion($user, $pass) {
+        public function iniciarSesion($user, $pass) {
             $where = 'usuario = :User';
             $param = array('User' => $user);
             $response = $this->db->select1('*', 'cliente', $where, $param);

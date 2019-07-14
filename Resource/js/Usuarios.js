@@ -1,10 +1,7 @@
 class Usuarios {
-    constructor() {
-
-    }
+    constructor() {}
 
     iniciarSesion(user, pass) {
-        //toastr.success('user: ' + user, 'Entre al iniciar sesión')
         $.post(
             URL + 'Login/iniciarSesion',
             {user, pass},
