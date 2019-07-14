@@ -32,8 +32,6 @@
                     );
                     return $data;
                 }
-            } else {
-                return $response;
-            }
+            } else return $response;
         }
     }

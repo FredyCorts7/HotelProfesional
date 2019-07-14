@@ -1,6 +1,10 @@
 <?php
-    class Errors {
+    class Errors extends Controllers {
+        public function __construct() {
+            parent::__construct();
+        }
+
         public function error() {
-            echo 'Error!';
+            $this->view->render($this, 'error');
         }
     }
