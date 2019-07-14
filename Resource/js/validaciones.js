@@ -19,6 +19,15 @@ var validarNombre = name => {
     return true
 }
 
+var validarTipoDoc = tipodoc => {
+    if (tipodoc.value == '0') {
+        toastr.warning('Debes seleccionar tu tipo de documento', 'Tener en cuenta')
+        tipodoc.focus()
+        return false
+    }
+    return true
+}
+
 var validarDocumento = doc => {
     if (doc.value == '') {
         toastr.warning('Debes ingresar tu documento', 'Tener en cuenta')
@@ -35,6 +44,19 @@ var validarDocumento = doc => {
     } else if (isNaN(doc.value)) {
         toastr.warning('Tu documento solo debe contener números', 'Tener en cuenta')
         doc.focus()
+        return false
+    }
+    return true
+}
+
+var validarUbicacion = location => {
+    if (location.value == '') {
+        toastr.warning('Debes ingresar tu dirección de ubicación', 'Tener en cuenta')
+        location.focus()
+        return false
+    } else if (location.value.length > 50) {
+        toastr.warning('Tu dirección de ubicación debe contener menos de 51 caracteres', 'Tener en cuenta')
+        location.focus()
         return false
     }
     return true

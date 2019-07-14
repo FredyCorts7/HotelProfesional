@@ -9,7 +9,12 @@ var mostrarContrasena = () => {
 }
 
 var usuarios = new Usuarios()
-var clientes = new Clientes()
+var registrar = new Registrar()
+
+$().ready(() => {
+    let urlActual = window.location.pathname
+    usuarios.datosUsuario(urlActual)
+})
 
 var validar = () => {
     let pass = document.getElementById('txtPassword')
@@ -26,6 +31,6 @@ var registrarCliente = () => {
     let cliEmail = document.getElementById('cliEmail')
     let cliUser = document.getElementById('cliUser')
     let cliPass = document.getElementById('cliPass')
-    if (validarNombre(cliName) && validarNombre(cliLastname) && validarDocumento(cliDoc) && validarCorreo(cliEmail) && validarUsuario(cliUser) && validarContrasena(cliPass)) 
-        clientes.registrarCliente(cliName.value, cliLastname.value, cliTipoDoc.value, cliDoc.value, cliLocation.value, cliEmail.value, cliUser.value, cliPass.value)
+    if (validarNombre(cliName) && validarNombre(cliLastname) && validarTipoDoc(cliTipoDoc) && validarDocumento(cliDoc) && validarUbicacion(cliLocation) && validarCorreo(cliEmail) && validarUsuario(cliUser) && validarContrasena(cliPass)) 
+        registrar.registrarCliente(cliName.value, cliLastname.value, cliTipoDoc.value, cliDoc.value, cliLocation.value, cliEmail.value, cliUser.value, cliPass.value)
 }

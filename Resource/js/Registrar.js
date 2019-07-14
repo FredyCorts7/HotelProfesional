@@ -1,4 +1,4 @@
-class Clientes {
+class Registrar {
     constructor() {}
 
     registrarCliente(cliName, cliLastname, cliTipoDoc, cliDoc, cliLocation, cliEmail, cliUser, cliPass) {
@@ -9,5 +9,9 @@ class Clientes {
                 console.log(res)
             }
         )
+    }
+
+    registrarEmpleado() {
+        
     }
 }

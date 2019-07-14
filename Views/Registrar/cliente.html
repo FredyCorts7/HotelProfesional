@@ -1,8 +1,10 @@
     <title>Hotel Alamo : Registrar Cliente</title>
 </head>
-<body class="darkbg">
-    <div class="container text-center loginbg my-5 p-4">
-        <h1 class="tittle mb-5">Formulario de Registro</h1>
+<body>
+    <div class="container text-center my-5 p-4">
+        <div class="rounded lastnews darkbg mt-2 mb-5 p-1">
+            <h1 class="tittle">Formulario de Registro</h1>
+        </div>
         <form id="formcliente">
             <div class="mb-3">
                 <div class="form-group">
@@ -20,6 +22,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
                             <select id="cliTipoDoc" class="form-control">
                                 <option value="0">Seleccionar Tipo de Documento</option>
+                                <option value="1">Cédula de Ciudadanía</option>
                             </select>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -48,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            Ya tengo cuenta. <a href="http://localhost/HotelProfesional/Login/login">ir a Iniciar Sesión</a>
+            <p>Ya tengo cuenta. <a href="http://localhost/HotelProfesional/Login/login">ir a Iniciar Sesión</a></p>
             <a onclick="registrarCliente()" class="btn btn-block dorbg hand">Registrarme</a>
         </form>
     </div>
