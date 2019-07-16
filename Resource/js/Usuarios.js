@@ -6,7 +6,7 @@ class Usuarios {
             URL + 'Login/iniciarSesion',
             {user, pass},
             res => {
-                console.log(res)
+                //console.log(res)
                 try {
                     var item = JSON.parse(res)
                     if (item.idcliente >  0) {

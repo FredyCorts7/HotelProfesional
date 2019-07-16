@@ -11,7 +11,7 @@ var validarNombre = name => {
         toastr.warning('Tus nombres deben contener menos de 21 caracteres', 'Tener en cuenta')
         name.focus()
         return false
-    } else if (!/^[A-Z]+$/i.test(name.value)) {
+    } else if (!/^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'][\s]*)+([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])[\s]*?([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])?$/g.test(name.value)) {
         toastr.warning('Tus nombres solo deben contener letras', 'Tener en cuenta')
         name.focus()
         return false
