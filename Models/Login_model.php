@@ -16,7 +16,7 @@
                         'num_documento' => $response['num_documento'],
                         'nombre' => $response['nombre'],
                         'apellido' => $response['apellido'],
-                        'apellido' => $response['direccion'],
+                        'direccion' => $response['direccion'],
                         'correo' => $response['correo'],
                         'usuario' => $response['usuario'],
                         'contrasena' => $response['contrasena'],

@@ -33,4 +33,15 @@
             }
             $pdo = null;
         }
+
+        function insert($table, $value, $param) {
+            try {
+                $query = 'INSERT INTO '.$table.$value;
+                $sth = $this->pdo->prepare($query);
+                $sth->execute($param);
+                return true;
+            } catch (PDOException $e) {
+                return $e->getMessage();
+            }
+        }
     }
