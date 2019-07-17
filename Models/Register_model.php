@@ -1,5 +1,5 @@
 <?php
-    class Registrar_model extends Connection {
+    class Register_model extends Connection {
         public function __construct() {
             parent::__construct();
         }
@@ -11,9 +11,9 @@
                 'cliEmail' => $cliEmail,
                 'cliUser' => $cliUser,
             );
-            $response = $this->db->select1('*', 'cliente', $where, $param);
+            $response = $this->db->select('*', 'cliente', $where, $param);
             if (is_array($response)) {
-                $response = $response['results'];
+                $response = $response['results'][0];
                 if ($response == null) {
                     $value = '(num_documento, nombre, apellido, direccion, correo, usuario, contrasena, tipo_documento, tipo_cliente) VALUES (
                         :cliDoc, :cliName, :cliLastname, :cliLocation, :cliEmail, :cliUser, :cliPass, :cliTipoDoc, :cliTipo
@@ -45,9 +45,9 @@
             $param = array(
                 'empUser' => $empUser,
             );
-            $response = $this->db->select1('*', 'empleado', $where, $param);
+            $response = $this->db->select('*', 'empleado', $where, $param);
             if (is_array($response)) {
-                $response = $response['results'];
+                $response = $response['results'][0];
                 if ($response == null) {
                     $value = '(Nombre, Apellido, usuario, contrasena, tipo_empleado) VALUES (
                         :empName, :empLastname, empUser, :empPass, :empTipo

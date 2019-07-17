@@ -16,6 +16,10 @@ $().ready(() => {
     usuarios.datosUsuario(urlActual)
 })
 
+var obtenerTipoDocumentos = () => {
+    usuarios.obtenerTipoDocumentos()
+}
+
 var validar = () => {
     let pass = document.getElementById('txtPassword')
     let user = document.getElementById('txtUser')

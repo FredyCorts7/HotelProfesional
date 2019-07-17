@@ -1,5 +1,5 @@
 <?php
-    class Registrar extends Controllers {
+    class Register extends Controllers {
         public function __construct() {
             parent::__construct();
         }

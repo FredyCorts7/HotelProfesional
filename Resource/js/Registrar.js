@@ -3,7 +3,7 @@ class Registrar {
 
     registrarCliente(cliName, cliLastname, cliTipoDoc, cliDoc, cliLocation, cliEmail, cliUser, cliPass) {
         $.post(
-            URL + 'Registrar/registrarCliente',
+            URL + 'Register/registrarCliente',
             {cliName, cliLastname, cliTipoDoc, cliDoc, cliLocation, cliEmail, cliUser, cliPass},
             res => {
                 //console.log(res)
@@ -15,7 +15,7 @@ class Registrar {
 
     registrarEmpleado(empName, empLastname, empUser, empPass, empTipo) {
         $.post(
-            URL + 'Registrar/registrarEmpleado',
+            URL + 'Register/registrarEmpleado',
             {empName, empLastname, empUser, empPass, empTipo},
             res => {
                 //console.log(res)

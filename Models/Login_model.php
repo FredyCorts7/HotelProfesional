@@ -7,9 +7,9 @@
         public function iniciarSesion($user, $pass) {
             $where = 'usuario = :User';
             $param = array('User' => $user);
-            $response = $this->db->select1('*', 'cliente', $where, $param);
+            $response = $this->db->select('*', 'cliente', $where, $param);
             if (is_array($response)) {
-                $response = $response['results'];
+                $response = $response['results'][0];
                 if (password_verify($pass, $response['contrasena'])) {
                     $data = array(
                         'idcliente' => $response['idcliente'],

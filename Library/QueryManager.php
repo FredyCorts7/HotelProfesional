@@ -16,16 +16,17 @@
             }
         }
 
-        function select1($attr, $table, $where, $param) {
+        function select($attr, $table, $where, $param) {
             try {
-                if ($where == '') {
-                    $query = "SELECT ".$attr." FROM ".$table;
-                } else {
-                    $query = "SELECT ".$attr." FROM ".$table." WHERE ".$where;
-                }
+                if ($where == '') $query = "SELECT ".$attr." FROM ".$table;
+                else $query = "SELECT ".$attr." FROM ".$table." WHERE ".$where;
+
                 $sth = $this->pdo->prepare($query);
-                $sth->execute($param);
-                $response = $sth->fetch(PDO::FETCH_ASSOC);
+
+                if ($where == '') $sth->execute();
+                else $sth->execute($param);
+                
+                $response = $sth->fetchAll(PDO::FETCH_ASSOC);
                 
                 return array('results' => $response);
             } catch (PDOException $e) {
