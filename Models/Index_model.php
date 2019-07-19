@@ -4,7 +4,13 @@
             parent::__construct();
         }
 
-        public function indexModel() {
-            
+        public function obtenerHabitaciones() {
+            return $this->db->select('*', 'habitaciones', '', '');
+        }
+
+        public function obtenerHabitacion($idRoom) {
+            $where = 'idhabitaciones = :idRoom';
+            $param = array('idRoom' => $idRoom);
+            return $this->db->select('*', 'habitaciones', $where, $param);
         }
     }

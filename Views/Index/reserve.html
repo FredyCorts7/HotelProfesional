@@ -1,0 +1,81 @@
+    <title>Hotel Alamo : Haz tu Reserva</title>
+</head>
+<body>
+    <div class="navigationmenu">
+        <nav class="p-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <img id="logo" src="http://localhost/HotelProfesional/Resource/img/logo.png" alt="logo Hotel Alamo" class="logo">
+                        <label for="logo" id="lbllogo" class="tittle">Hotel Alamo</label>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <a href="http://localhost/HotelProfesional/Index/index" class="btn dorbg">Inicio</a>
+                        <a href="http://localhost/HotelProfesional/Index/reserve" class="btn dorbg">Reservar</a>
+                        <a href="" class="btn dorbg">Mis Reservas</a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <a id="btnIniciarSesion" href="http://localhost/HotelProfesional/Login/login" class="btn dorbg">Iniciar Sesión</a>
+                        <a id="btnCerrarSesion" href="http://localhost/HotelProfesional/Login/cerrarSesion" class="btn dorbg">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="rounded lastnews darkbg mt-2 mb-2 p-1">
+            <h4 class="tittle">Nuestras Habitaciones</h4>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-responsive-stack">
+                <thead class="dorbg">
+                    <tr>
+                        <td>Imagen</td>
+                        <td>Número</td>
+                        <td>Tipo</td>
+                        <td>Descripción</td>
+                        <td>Reservar</td>
+                    </tr>
+                </thead>
+                <tbody id="tbodyReserve">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="rounded lastnews darkbg mt-2 mb-2 p-1">
+                        <h4 class="tittle">Realiza tu Reserva</h4>
+                    </div>    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="resNumRoom">Número de Habitación</label>
+                                    <input id="resNumRoom" type="number" disabled class="form-control">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="resNumRoom">Tipo de Habitación</label>
+                                    <input id="resTypeRoom" type="text" disabled class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
